@@ -1,10 +1,41 @@
-@font-face {
-    font-family: "vazir";
-    src: url(../fonts/vazir/Vazir-Medium-FD-WOL.woff) format(woff),
-        url(../fonts/vazir/Vazir-Medium-FD-WOL.woff2) format(woff2),
-        url(../fonts/vazir/Vazir-Medium-FD-WOL.ttf) format(truetype);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-div {
+/* 
+==================
+Fonts
+==================
+*/
+@font-face {
     font-family: "vazir";
+    src: url(../fonts/vazir/Vazir-FD-WOL.woff) format(woff),
+        url(../fonts/vazir/Vazir-FD-WOL.woff2) format(woff2),
+        url(../fonts/vazir/Vazir-FD-WOL.ttf) format(truetype);
+}
+
+
+/* 
+==================
+Variables
+==================
+*/
+:root {
+    --clr-primary: #4F6D7A;
+    --clr-second: #DD6E42;
+    --ff-primary: "vazir", sans-serif;
+}
+
+body {
+    font-family: var(--ff-primary);
+    background: var(--clr-primary);
+    color: black;
+    text-align: right;
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
 }
