@@ -16,7 +16,6 @@ Fonts
         url(../fonts/vazir/Vazir-FD-WOL.ttf) format(truetype);
 }
 
-
 /* 
 ==================
 Variables
@@ -70,11 +69,19 @@ h2{
     padding: 0.5rem 1rem;
     border-radius: var(--radius);
     transition: var(--transition);
+    display: inline-block;
 }
 
 .btn:hover {
     background-color: var(--clr-second-light);
     color: var(--clr-primary);
+}
+
+.clearfix::after,
+.clearfix::before {
+    content: "";
+    clear: both;
+    display: block;
 }
 
 
@@ -114,4 +121,117 @@ Header
     outline: 0.125rem solid var(--clr-second);
     outline-offset: 0.25rem;
     padding: 0.5rem 1.75rem;
+}
+
+.content-divider {
+    height: 0.5rem;
+    background: linear-gradient(to left, var(--clr-second), var(--clr-second-light), var(--clr-second))
+}
+
+
+/* 
+==================
+Features
+==================
+*/
+.features {
+    background-color: var(--clr-light2);
+}
+
+.feature {
+    text-align: center;
+    padding: 1.5rem 0;
+    height: 220px;
+}
+
+.feature .feature-icon {
+    color: var(--clr-second);
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+.feature h4 {
+    margin-bottom: 0.75rem;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: var(--clr-primary);
+    padding: 0 2rem;
+}
+
+.feature:hover{
+    background-color: var(--clr-second-light2);
+    box-shadow: 0 3px 0 var(--clr-second);
+    transition: var(--transition);
+}
+
+.feature:hover .feature-icon {
+    transform: translateY(-5px);
+    transition: var(--transition);
+
+}
+
+@media screen and (min-width:576px) {
+    .feature {
+        float: right;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .feature {
+        float: right;
+        width: 25%;
+    }
+}
+
+
+/* 
+==================
+About
+==================
+*/
+.about-pic-container {
+    max-width: 30rem;
+    margin: auto;
+    border: solid 0.4rem var(--clr-second);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background-color: var(--clr-light2);
+}
+
+.about-pic-container:hover .about-pic {
+    transform: scale(1.2);
+    opacity: 0.75;
+}
+
+.about-pic {
+    transition: var(--transition);
+}
+
+.about-img,
+.about-info {
+    padding: 2rem 0;
+}
+
+.about-text {
+    color: var(--clr-primary);
+}
+
+.about-btn {
+    margin-top: 1.5rem;
+}
+
+@media screen and (min-width:992px) {
+    .about-info {
+        float: right;
+        width: 50%;
+    }
+
+    .about-img {
+        float: left;
+        width: 50%;
+    }
 }
