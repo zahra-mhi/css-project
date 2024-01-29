@@ -28,7 +28,7 @@ Variables
     --clr-second-light: #DDA15E;
     --clr-second-light2: #ddb689;
     --clr-light: white;
-    --clr-light2: #e9d6bf;
+    --clr-light2: #e4cfb5;
     --ff-primary: "vazir", sans-serif;
     --radius: 0.5rem;
     --transition: all 0.3s linear;
@@ -79,6 +79,12 @@ h2 {
     color: var(--clr-primary);
 }
 
+.content-divider {
+    height: 0.5rem;
+    background: linear-gradient(to left, var(--clr-second), var(--clr-second-light), var(--clr-second));
+
+}
+
 .clearfix::after,
 .clearfix::before {
     content: "";
@@ -104,9 +110,8 @@ h2 {
 }
 
 .section-title {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
-
 
 img {
     width: 100%;
@@ -137,7 +142,6 @@ Header
 .banner h1 {
     color: var(--clr-second);
     margin-bottom: 2rem;
-
 }
 
 .banner h2 {
@@ -265,5 +269,92 @@ About
 
     .about-pic-container {
         margin: auto;
+    }
+}
+
+
+/* 
+==================
+Products
+==================
+*/
+.Products {
+    background-color: var(--clr-light2);
+}
+
+.Products-info,
+.Products-card {
+    padding: 2rem 0;
+}
+
+.Product-text {
+    color: var(--clr-primary);
+    max-width: 50rem;
+}
+
+.btn-products {
+    margin: 1.5rem 0;
+}
+
+.product {
+    margin-bottom: 2rem;
+}
+
+.product-img-container{
+    border-radius: var(--radius);
+    overflow: hidden;
+    background-color: var(--clr-light2);
+    margin-bottom: 1rem;
+
+}
+
+.product-img {
+    height: 20rem;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition);
+}
+
+.product-img:hover{
+    transform: scale(1.2);
+    opacity: 0.75;
+}
+
+.product-title {
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+}
+
+.product-price {
+    margin-right: 1.5rem;
+    color: var(--clr-second);
+}
+
+@media screen and (min-width:668px) {
+    .product {
+        float: right;
+        width: 50%;
+        padding: 0 2rem;
+    }
+}
+
+
+@media screen and (min-width:992px) {
+    .product {
+        width: 33.33%;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .Products-info{
+        float: right;
+        width: 30%;
+    }
+    .Products-card {
+        float: left;
+        width: 70%;
+    }
+    .product {
+        padding: 0 1rem;
     }
 }
